@@ -1,0 +1,7 @@
+services:
+  starter-app:
+    image: starter10-app-mavenpro
+    build: .
+    container_name: starter10mavenpro
+    ports:
+      - "8081:8080"

@@ -9,9 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/starter-maven")
 public class HelloController {
 
-    @GetMapping("/hello")
+    @GetMapping("/v1/hello")
     public String hello(Model model) {
         model.addAttribute("message", "Hello Maven!!!");
+        return "index";
+    }
+
+    @GetMapping("/v2/hello")
+    public String hello2(Model model) {
+        model.addAttribute("message", "Hello Coding!!!");
         return "index";
     }
 }
